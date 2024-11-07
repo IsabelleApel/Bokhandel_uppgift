@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -55,6 +56,7 @@ article {
 }
 
 /* Responsive Layout for Desktop */
+
 @media (min-width: 900px) {
     main {
         grid-template-columns: 2fr 1fr; 
@@ -64,4 +66,38 @@ article {
     .event, .news {
         grid-template-columns: 1fr 1fr;
     }
+}
+
+footer{
+    background-color: rgb(97, 7, 7);
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+    place-items: center;
+}
+
+ul{
+    list-style: none;
+}
+
+ul:hover{
+    cursor: pointer;
+}
+
+/* brand iconer style */
+figure{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+.fa-brands{
+    padding: 1rem;
+    color: rgb(255, 255, 255);
+}
+
+i:hover{
+    cursor: pointer;
 }
