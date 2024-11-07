@@ -6,6 +6,11 @@
 }
 
 body {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(97, 7, 7);
     font-family: Arial, sans-serif;
     line-height: 1.6;
 }
@@ -27,6 +32,7 @@ header img {
 }
 
 main {
+    background-color: white;
     display: grid;
     grid-template-areas: 
     "event"
