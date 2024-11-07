@@ -17,6 +17,15 @@ header, footer, aside {
 }
 
 /* Layout Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    max-height: 9em;
+}
+header img {
+    max-width: 10em;
+}
+
 main {
     display: grid;
     grid-template-columns: 1fr;
