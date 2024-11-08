@@ -58,9 +58,18 @@ header img {
     height: auto;
 }
 
+article {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    display: inline;
+  }
+
+
 .preview img {
-    width: 50%;
+    width: 100px;
     height: auto;
+    overflow: hidden;
 }
 
 main {
@@ -88,10 +97,13 @@ main section {
 
 section .event{
     grid-area: event;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 section .news{
     grid-area: news;
+    display: flex;
 }
 
 aside{
