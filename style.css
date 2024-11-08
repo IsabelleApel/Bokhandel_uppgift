@@ -159,50 +159,59 @@ aside article .date{
 /* Responsiv Layout for Tablet
 @media (min-width: 600px) {
     main {
-        grid-template-columns: 1fr 1fr 1fr; 
-        grid-template-areas: 
-        "event new aside";
+        grid-template-columns: 1fr 1fr; 
     }
     .event, .news {
         grid-template-columns: 1fr; 
     }
-} */
+} 
 
+
+    footer{
+        grid-template-columns: 1fr;
+        
+    }
+}
+*/
 
 /* Responsive Layout for Desktop */
+
 @media (min-width: 1000px) {
+
     main {
         grid-template-columns: 2fr 1fr; 
-        grid-template-areas: 
-        "event aside"
-        "news aside";
     }
 
     /*two-column grid */
     .event, .news {
         grid-template-columns: 1fr 1fr;
     }
+
+    footer{
+        grid-template-columns: repeat(3, 1fr);
+        height: 300px;
+    }
+    
 }
 
 footer{
     background-color: rgb(97, 7, 7);
     color: white;
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
     gap: 1.5rem;
     place-items: center;
 }
 
-ul{
+.länkar ul{
     list-style: none;
 }
 
-ul:hover{
+.länkar ul:hover{
     cursor: pointer;
 }
 
 /* brand iconer style */
-figure{
+.some figure{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -214,6 +223,6 @@ figure{
     color: rgb(255, 255, 255);
 }
 
-i:hover{
+.some i:hover{
     cursor: pointer;
 }
