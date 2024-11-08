@@ -11,24 +11,45 @@ body {
     display: flex;
     flex-direction: column;
     background-color: rgb(97, 7, 7);
-    font-family: Arial, sans-serif;
+    font-family: raleway, sans-serif;
     line-height: 1.6;
 }
 
 header, footer, aside {
     padding: 1rem;
-    background-color: #f3f3f3;
+    background-color: rgb(247, 245, 226);
     text-align: center;
+}
+
+/* Fonts */
+h1, h2, p {
+    margin-bottom: 0.3em;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+h2 {
+    font-size: 1.3em;
+    text-transform: uppercase; 
+    color: rgb(97, 7, 7);
+}
+
+.ingress {
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
 /* Layout Styling */
 header {
     display: flex;
     justify-content: space-between;
-    max-height: 9em;
 }
+
 header img {
-    max-width: 10em;
+    width: 170px;
+    height: auto;
 }
 
 main {
