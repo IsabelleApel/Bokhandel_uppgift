@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 
+
 body {
     max-width: 1200px;
     margin: 0 auto;
@@ -19,6 +20,11 @@ header, footer, aside {
     padding: 1rem;
     background-color: rgb(247, 245, 226);
     text-align: center;
+}
+
+.section-title {
+    font-size: large;
+    display: inline;
 }
 
 /* Fonts */
@@ -52,6 +58,20 @@ header img {
     height: auto;
 }
 
+article {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    display: inline;
+  }
+
+
+.preview img {
+    width: 100px;
+    height: auto;
+    overflow: hidden;
+}
+
 main {
     background-color: white;
     display: grid;
@@ -77,10 +97,13 @@ main section {
 
 section .event{
     grid-area: event;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 section .news{
     grid-area: news;
+    display: flex;
 }
 
 aside{
