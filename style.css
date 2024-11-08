@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 
+
 body {
     max-width: 1200px;
     margin: 0 auto;
@@ -19,6 +20,11 @@ header, footer, aside {
     padding: 1rem;
     background-color: rgb(247, 245, 226);
     text-align: center;
+}
+
+.section-title {
+    font-size: large;
+    display: inline;
 }
 
 /* Fonts */
@@ -49,6 +55,11 @@ header {
 
 header img {
     width: 170px;
+    height: auto;
+}
+
+.preview img {
+    width: 50%;
     height: auto;
 }
 
