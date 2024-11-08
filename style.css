@@ -60,16 +60,18 @@ header img {
 
 article {
     display: flex;
-    align-items: center;
     gap: 2rem;
-    display: inline;
   }
 
 
 .preview img {
-    width: 100px;
+    width: 150px;
     height: auto;
     overflow: hidden;
+}
+
+.eventpicture {
+    flex-wrap: wrap;
 }
 
 main {
