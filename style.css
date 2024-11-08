@@ -180,7 +180,11 @@ aside article .date{
 
     main {
         grid-template-columns: 2fr 1fr; 
+        grid-template-areas: 
+        "event aside"
+        "news aside";
     }
+
 
     /*two-column grid */
     .event, .news {
