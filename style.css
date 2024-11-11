@@ -53,6 +53,10 @@ header {
     justify-content: space-between;
 }
 
+header p:hover{
+    cursor: pointer;
+}
+
 header img {
     width: 170px;
     height: auto;
@@ -110,7 +114,6 @@ section .news{
 
 aside{
     grid-area: aside;
-    max-width: 100vw;
     display: flex;
     flex-direction: column;
     padding: 0;
@@ -143,14 +146,13 @@ aside article:last-child{
 
 .text-container{
     gap: 0;
-    padding-left: 1rem;
 }
 
 .text-container:hover{
     cursor: pointer;
 }
 
-.text-container h1{
+.text-container h2{
     text-align: left;
 }
 
@@ -218,7 +220,9 @@ aside article .date{
 
     footer{
         grid-template-columns: repeat(3, 1fr);
-        height: 300px;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        text-align: left;
     }
     
 }
