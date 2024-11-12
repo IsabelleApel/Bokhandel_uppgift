@@ -27,6 +27,7 @@ header, footer, aside {
     text-align: center;
 }
 
+
 .hero-image {
     background-image: /*linear-gradient(rgba(0, 0, 0, 0.2), rgba(97, 7, 7, 0.5)),*/ url("/assets/hero.jpg");
     height: 40vh;
@@ -133,6 +134,7 @@ main {
     grid-template-areas: 
     "event-heading"
     "event"
+    "favourite"
     "news-heading"
     "news"
     "aside";
@@ -188,18 +190,26 @@ article {
 
 
 .favourite{
+    grid-area: favourite;
     display: flex;
     flex-direction: column;
     overflow: hidden;
 }
 
+.favourite img{
+    position: relative;
+    z-index: 2;
+    width: 5vw;
+}
+
 .wrapper-favourite{
     display: flex;
     overflow-x: auto;
-    gap: 1rem;
 }
 
 .wrapper-favourite article{
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -288,9 +298,10 @@ aside article .date{
     
     main {
         grid-template-columns: 3fr 1fr; 
-        grid-template-areas: 
-        "event-heading aside"
+        grid-template-areas:
+        "event-heading event-heading"
         "event aside"
+        "favourite aside"
         "news-heading aside"
         "news aside";
     }
@@ -305,9 +316,10 @@ aside article .date{
 
     main {
         grid-template-columns: 3fr 1fr; 
-        grid-template-areas: 
+        grid-template-areas:
         "event-heading event-heading"
         "event aside"
+        "favourite aside"
         "news-heading aside"
         "news aside";
     }
