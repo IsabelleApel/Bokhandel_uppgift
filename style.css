@@ -148,6 +148,33 @@ article {
     width: 60%;
 }
 
+
+.favourite{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.wrapper-favourite{
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+}
+
+.wrapper-favourite article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.favourite-img{
+    width: 10rem;
+}
+
+.favourite-img img{
+    width: 100%;
+}
+
 aside{
     grid-area: aside;
     display: flex;
