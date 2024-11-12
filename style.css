@@ -151,6 +151,61 @@ section .news{
     display: flex;
 }
 
+/* .favourite{
+    position: relative;
+    overflow: hidden;
+}
+
+ .wrapper-favourite{
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.wrapper-favourite::-webkit-scrollbar{
+    display: none;
+}
+
+.favourite article{
+    flex: 0 0 auto;
+    width: 200px;
+    height: 450px;
+}
+
+.favourite-img{
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}  */
+
+
+.favourite{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.wrapper-favourite{
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+}
+
+.wrapper-favourite article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.favourite-img{
+    width: 10rem;
+}
+
+.favourite-img img{
+    width: 100%;
+}
+
 aside{
     grid-area: aside;
     display: flex;
