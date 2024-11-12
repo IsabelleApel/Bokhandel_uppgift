@@ -4,12 +4,18 @@
     box-sizing: border-box;
 }
 
+:root{
+    --main-color:rgb(97, 7, 7);
+    --hover-color: #F69799;
+    --bg-color: #F7F5E2;
+}
+
 body {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    background-color: rgb(97, 7, 7);
+    background-color: var(--main-color);
     font-family: raleway, sans-serif;
     line-height: 1.6;
     height: 100%;
@@ -17,7 +23,7 @@ body {
 
 header, footer, aside {
     padding: 1rem;
-    background-color: rgb(247, 245, 226);
+    background-color: var(--bg-color);
     text-align: center;
 }
 
@@ -64,7 +70,7 @@ h1 {
 h2 {
     font-size: 1.3em;
     text-transform: uppercase; 
-    color: rgb(97, 7, 7);
+    color: var(--main-color);
 }
 
 .ingress {
@@ -112,11 +118,11 @@ nav li{
 }
 
 .contactBtn:hover{
-    color: #F69799;
+    color: var(--hover-color)
 }
 
 nav li:hover{
-    color: #F69799;
+    color: var(--hover-color);
     transform: scale(1.2);
     text-shadow: none;
 }
@@ -224,7 +230,7 @@ aside .event-heading {
 aside .calendar{
     border: 1px solid #bebdac;
     border-radius: 5px;
-    background-color: #F7F5E2;
+    background-color: var(--bg-color);
     gap: 0;
 }
 
@@ -271,30 +277,12 @@ aside article .date{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #F69799;
+    background-color: var(--hover-color);
     color: #000000;
     line-height: 1;
     text-align: center;
     align-self: flex-start;
 }
-
-/* Responsiv Layout for Tablet
-@media (min-width: 600px) {
-    main {
-        grid-template-columns: 1fr 1fr; 
-    }
-    .event, .news {
-        grid-template-columns: 1fr; 
-    }
-} 
-
-
-    footer{
-        grid-template-columns: 1fr;
-        
-    }
-}
-*/
 
 @media (min-width: 750px) {
     
@@ -313,9 +301,6 @@ aside article .date{
 
 }
 
-
-/* Responsive Layout for Desktop */
-
 @media (min-width: 1000px) {
 
     main {
@@ -326,7 +311,6 @@ aside article .date{
         "news-heading aside"
         "news aside";
     }
-
 
     /*two-column grid */
     .event, .news {
@@ -340,38 +324,6 @@ aside article .date{
         text-align: left;
     }
     
-}
-
-footer{
-    color: rgb(97, 7, 7);
-    display: grid;
-    gap: 1.5rem;
-    place-items: center;
-}
-
-.länkar ul{
-    list-style: none;
-}
-
-.länkar ul:hover{
-    cursor: pointer;
-}
-
-/* brand iconer style */
-.some figure{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-}
-.fa-brands{
-    padding: 1rem;
-    color: rgb(97, 7, 7);
-}
-
-.some i:hover{
-    cursor: pointer;
 }
 
 /*Styling på form*/
@@ -392,7 +344,7 @@ label{
     align-items: center;
     padding: 8px 16px;
     border-radius: 8px;
-    border-color: darkblue;
+    border-color: rgb(0, 0, 0);
     border-style: solid;
     border-width: 0.1rem;
     margin-bottom: 1rem;
@@ -433,5 +385,38 @@ textarea{
 }
 
 .form-button:hover{
+    background-color: var(--hover-color);
+}
+
+footer{
+    color: var(--main-color);
+    display: grid;
+    gap: 1.5rem;
+    place-items: center;
+}
+
+.länkar ul{
+    list-style: none;
+}
+
+.länkar ul:hover{
+    cursor: pointer;
+}
+
+/* brand iconer style */
+.some figure{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+.fa-brands{
+    padding: 1rem;
+    color: rgb(97, 7, 7);
+}
+
+.some i:hover{
+    cursor: pointer;
     background-color: #F69799;
 }
