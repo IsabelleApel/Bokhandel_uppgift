@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +5,7 @@
 }
 
 body {
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -19,11 +18,6 @@ header, footer, aside {
     padding: 1rem;
     background-color: rgb(247, 245, 226);
     text-align: center;
-}
-
-.section-title {
-    font-size: large;
-    display: inline;
 }
 
 /* Fonts */
@@ -61,6 +55,7 @@ header img {
     width: 140px;
     height: auto;
 }
+
 nav {
     display: flex;
     justify-content: flex-end;
@@ -94,15 +89,48 @@ nav li:hover{
     text-shadow: none;
 }
 
+main {
+    background-color: white;
+    display: grid;
+    grid-template-areas: 
+    "event-heading"
+    "event"
+    "news-heading"
+    "news"
+    "aside";
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.event-heading, .news-heading{
+    grid-area: event-heading;
+    font-family: noteworthy;
+    text-align: left;
+    font-size: 2em;
+    margin-bottom: 0em;
+}
+
+.news-heading {
+    grid-area: news-heading;
+}
+
+section {
+    display: grid;
+    gap: 1rem;
+}
+
+.event{
+    grid-area: event;
+}
+
+.news{
+    grid-area: news;
+}
+
 article {
     display: flex;
-    gap: 0.4rem;
-  }
-
-.preview img {
-    width: 150px;
-    height: auto;
-    overflow: hidden;
+    gap: 0.4em;
+    padding: 1.5em;
 }
 
 .event-picture {
@@ -120,49 +148,18 @@ article {
     width: 60%;
 }
 
-main {
-    background-color: white;
-    display: grid;
-    grid-template-areas: 
-    "event"
-    "news"
-    "aside";
-    gap: 1rem;
-    padding: 1rem;
-}
-
-main section {
-    display: grid;
-    gap: 1rem;
-}
-
-.event article, .news article {
-    padding: 0.5rem;
-}
-
-section .event{
-    grid-area: event;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-section .news{
-    grid-area: news;
-    display: flex;
-}
-
 aside{
     grid-area: aside;
     display: flex;
     flex-direction: column;
     padding: 0;
     background-color: #fff;
+    margin-top: 1.5em;
 }
 
-aside .calendar-heading{
-    text-align: left;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+aside .event-heading {
+    margin-top: 1em;
+    margin-bottom: 0.4em;
 }
 
 aside .calendar{
@@ -240,6 +237,24 @@ aside article .date{
 }
 */
 
+@media (min-width: 750px) {
+    
+    main {
+        grid-template-columns: 3fr 1fr; 
+        grid-template-areas: 
+        "event-heading aside"
+        "event aside"
+        "news-heading aside"
+        "news aside";
+    }
+    
+    .event, .news {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
 /* Responsive Layout for Desktop */
 
 @media (min-width: 1000px) {
@@ -247,7 +262,9 @@ aside article .date{
     main {
         grid-template-columns: 3fr 1fr; 
         grid-template-areas: 
+        "event-heading event-heading"
         "event aside"
+        "news-heading aside"
         "news aside";
     }
 
