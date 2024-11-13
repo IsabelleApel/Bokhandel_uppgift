@@ -156,6 +156,13 @@ main {
     margin-bottom: 0em;
 }
 
+.event-text a{
+    color: var(--main-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding-right: 1rem;
+}
+
 .news-heading {
     grid-area: news-heading;
 }
